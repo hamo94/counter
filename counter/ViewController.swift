@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var flag=0;
     var i=0;
     @IBOutlet weak var label: UILabel!
     @IBAction func button(_ sender: UIButton) {
@@ -18,6 +19,18 @@ class ViewController: UIViewController {
     @IBAction func resetx(_ sender: UIButton) {
         i=0;
         label.text=String(i);
+    }
+    @IBAction func color(_ sender: Any) {
+       if(flag==0)
+       {
+        label.textColor=UIColor.blue;
+        flag=1;
+        }
+        else
+       {
+        label.textColor=UIColor.black;
+        flag=0;
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
